@@ -9,5 +9,5 @@ function f(numbers){
     numbers.splice(0,1);
     f(numbers);
 }
-//var arr = [1, 2, 3];
-f(1, 2, 3);
+var arr = [1, 2, 3];
+f(arr);
