@@ -1,7 +1,7 @@
 const arr = [1,1,1,1,1];
 
 function some(arr, func){
-    if(typeof arr !== 'object'){
+    if(!Array.isArray(arr)){
         throw new Error('arr must be an array');
     }
     if(typeof func !== 'function'){

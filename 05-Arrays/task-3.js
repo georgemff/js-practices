@@ -1,7 +1,7 @@
 const arr = [2,2,2,2,2,2];
 
 function every(arr, func){
-    if(typeof arr !== 'object'){
+    if(!Array.isArray(arr)){
         throw new Error('arr must be an array');
     }
     if(typeof func !== 'function'){

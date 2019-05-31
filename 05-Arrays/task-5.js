@@ -1,8 +1,8 @@
 const arr = [1,2,3];
-const acc = 10;
+const acc = 0;
 
 function reduce(arr, func, acc1){
-    if(typeof arr !== 'object'){
+    if(!Array.isArray(arr)){
         throw new Error('arr must be an array');
     }
     if(typeof func !== 'function'){
