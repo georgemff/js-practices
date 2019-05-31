@@ -13,9 +13,10 @@ function filter(arr, func){
                 greater.push(arr[i]);
             }
     }
-    console.log(greater);
+    return greater;
 }
 
-filter(arr, function(item, i, arr) {
-     return  item > 1;
-});
+console.log(
+    filter(arr, function(item, i, arr) {
+        return  item > 1;
+    }));
