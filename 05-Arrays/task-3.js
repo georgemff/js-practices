@@ -1,6 +1,6 @@
-const arr = [2,2,3,2,2,2];
+const arr = [2,2,2,2,2,2];
 
-function filter(arr, func){
+function every(arr, func){
     if(typeof arr !== 'object'){
         throw new Error('arr must be an array');
     }
@@ -8,15 +8,14 @@ function filter(arr, func){
         throw new Error('func must be a function')
     }
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] > 1){
-            func(arr[i], i, arr);
-        } else {
-            console.log(false);
-            return 0;
-        }
+        if(!func(arr[i], i, arr)){
+            return false;
+        };
     }
-    console.log(true)
+    return true;
 }
 
-filter(arr, function(item, i, arr) {}
-);
+console.log(every(arr, function(item, i, arr) {
+        return item > 1;
+    }
+));

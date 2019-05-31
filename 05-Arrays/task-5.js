@@ -1,5 +1,5 @@
 const arr = [1,2,3];
-const acc = 0;
+const acc = 10;
 
 function reduce(arr, func, acc1){
     if(typeof arr !== 'object'){
@@ -11,7 +11,7 @@ function reduce(arr, func, acc1){
     if(typeof acc1 !== 'string' && typeof acc1 !== 'number'){
         throw new Error('acc1 must be a string or number');
     }
-    var sum = acc1;
+    let sum = acc1;
     for(let i=0; i<arr.length; i++){
          func(sum, arr[i], i, arr);
         sum += arr[i];

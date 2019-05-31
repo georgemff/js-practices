@@ -1,7 +1,7 @@
-const arr = [1,2,3];
+const arr = [1, 2, 3];
 const acc = 0;
 
-function reduce(arr, func, acc1){
+function reduceRight(arr, func, acc1){
     if(typeof arr !== 'object'){
         throw new Error('arr must be an array');
     }
@@ -19,6 +19,6 @@ function reduce(arr, func, acc1){
     return sum;
 }
 
-console.log(reduce(arr, function(acc, item, i, arr) {
+console.log(reduceRight(arr, function(acc, item, i, arr) {
     return acc + item;
 }, acc));

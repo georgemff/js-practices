@@ -7,13 +7,15 @@ function filter(arr, func){
     if(typeof func !== 'function'){
         throw new Error('func must be a function')
     }
+    let greater =[];
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] > 1){
-            func(arr[i], i, arr);
-        }
+            if(func(arr[i], i, arr)) {
+                greater.push(arr[i]);
+            }
     }
+    console.log(greater);
 }
 
 filter(arr, function(item, i, arr) {
-    console.log('Greate than 1 is: ' + item, ' with index: '+ i + ' in array: ' + arr)
+     return  item > 1;
 });
