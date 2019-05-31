@@ -1,4 +1,4 @@
-const arr = [1,1,1,1,2];
+const arr = [1,1,2,1,1];
 
 function filter(arr, func){
     if(typeof arr !== 'object'){
@@ -9,7 +9,6 @@ function filter(arr, func){
     }
     for(let i = 0; i < arr.length; i++){
         if(arr[i] > 1){
-            func(arr[i], i, arr);
             console.log(true);
             return 0;
         }
