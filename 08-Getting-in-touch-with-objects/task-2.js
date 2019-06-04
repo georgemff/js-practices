@@ -1,4 +1,7 @@
 const person = {
+    set salary(val){
+      throw new Error('Can not set value');
+    },
     get salary(){
         if(!person.rate){
             return 0;
@@ -14,4 +17,5 @@ Object.defineProperty(person, 'rate', {
     enumerable: false,
 });
 person.rate = 30;
+// person.salary = 30;
 console.log(person.salary);
