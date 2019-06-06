@@ -2,16 +2,13 @@ Object.prototype.mergeDeepRight = function(object) {
     arrFunction(this, object);
 
     function arrFunction(data, source){
-
         let keys = Object.keys(source);
-
-       keys.forEach(function(key){
+        keys.forEach(function(key){
+            data[key] = source[key];
             if(typeof source[key] === 'object' && !Array.isArray(source[key])){
                 arrFunction(data[key], source[key]);
            }  else if (Array.isArray(source[key])){
                 data[key].push(...source[key]);
-            } else {
-                data[key] = source[key];
             }
        });
     }
@@ -39,6 +36,9 @@ data.mergeDeepRight({
             meta: {
                 tags: ['vip']
             }
+        },
+    nope: {
+        value: 'nope'
         }
     });
 console.log(data);
