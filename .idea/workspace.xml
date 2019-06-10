@@ -16,19 +16,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/11-Object-Oriented-Programming-Part-2/task-3.js">
+        <entry file="file://$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-6.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/11-Object-Oriented-Programming-Part-2/task-2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            <state relative-caret-position="315">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -41,9 +32,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/02-Control-Flow-Loops/task-2.js" />
-        <option value="$PROJECT_DIR$/02-Control-Flow-Loops/task-3.js" />
-        <option value="$PROJECT_DIR$/02-Control-Flow-Loops/task-4.js" />
         <option value="$PROJECT_DIR$/02-Control-Flow-Loops/task-5.js" />
         <option value="$PROJECT_DIR$/02-Control-Flow-Loops/task-6.js" />
         <option value="$PROJECT_DIR$/02-Control-Flow-Loops/task-7.js" />
@@ -87,8 +75,14 @@
         <option value="$PROJECT_DIR$/09-Expanded-Object-Functionality/task-2.js" />
         <option value="$PROJECT_DIR$/10-Object-Oriented-Programming-Part-1/task-5.js" />
         <option value="$PROJECT_DIR$/11-Object-Oriented-Programming-Part-2/task-1.js" />
-        <option value="$PROJECT_DIR$/11-Object-Oriented-Programming-Part-2/task-3.js" />
         <option value="$PROJECT_DIR$/11-Object-Oriented-Programming-Part-2/task-2.js" />
+        <option value="$PROJECT_DIR$/11-Object-Oriented-Programming-Part-2/task-3.js" />
+        <option value="$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-1.js" />
+        <option value="$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-2.js" />
+        <option value="$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-3.js" />
+        <option value="$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-4.js" />
+        <option value="$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-5.js" />
+        <option value="$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-6.js" />
       </list>
     </option>
   </component>
@@ -112,7 +106,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -123,12 +116,13 @@
             <path>
               <item name="js-practices" type="b2602c69:ProjectViewProjectNode" />
               <item name="js-practices" type="462c0819:PsiDirectoryNode" />
-              <item name="11-Object-Oriented-Programming-Part-2" type="462c0819:PsiDirectoryNode" />
+              <item name="12-Introducing-JavaScript-Classes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,18 +192,21 @@
       <workItem from="1559746488602" duration="1665000" />
       <workItem from="1559754587867" duration="2594000" />
       <workItem from="1559829324131" duration="9074000" />
-      <workItem from="1559902295179" duration="2875000" />
+      <workItem from="1559902295179" duration="2931000" />
+      <workItem from="1559919957180" duration="2530000" />
+      <workItem from="1560171405307" duration="3092000" />
+      <workItem from="1560175382399" duration="2907000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71136000" />
+    <option name="totallyTimeSpent" value="79721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1920" height="1021" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17079599" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.156563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -251,41 +248,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/02-Control-Flow-Loops/task-3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-Control-Flow-Loops/task-4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-Control-Flow-Loops/task-5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="8" lean-forward="true" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-Control-Flow-Loops/task-6.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-Control-Flow-Loops/task-7.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02-Control-Flow-Loops/task-8.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -544,13 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/09-Expanded-Object-Functionality/task-2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/10-Object-Oriented-Programming-Part-1/task-5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-94">
@@ -565,24 +520,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/11-Object-Oriented-Programming-Part-2/task-3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="41" lean-forward="true" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/11-Object-Oriented-Programming-Part-2/task-1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="147">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/11-Object-Oriented-Programming-Part-2/task-2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        <state relative-caret-position="420">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/11-Object-Oriented-Programming-Part-2/task-3.js">
+    <entry file="file://$PROJECT_DIR$/09-Expanded-Object-Functionality/task-2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="420">
+          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="42" lean-forward="true" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/12-Introducing-JavaScript-Classes/task-6.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
