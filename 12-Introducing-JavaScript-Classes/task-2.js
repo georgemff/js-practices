@@ -1,15 +1,16 @@
 class Worker {
     constructor (name, surname, rate, days) {
-        let _name = name;
-        let _surname = surname;
-        let _rate = rate;
-        let _days = days;
-        this.getName = () => _name;
-        this.getSurname = () => _surname;
-        this.getRate = () => _rate;
-        this.getDays = () => _days;
-        this.getSalary = () =>  _rate*_days;
+        this._name = name;
+        this._surname = surname;
+        this._rate = rate;
+        this._days = days;
     }
+        getName = () => this._name;
+        getSurname = () => this._surname;
+        getRate = () => this._rate;
+        getDays = () => this._days;
+        getSalary = () =>  this._rate*this._days;
+
 }
 
 let worker = new Worker('John', 'Smith', 10, 31);

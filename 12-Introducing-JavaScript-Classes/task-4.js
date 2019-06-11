@@ -1,17 +1,17 @@
 class MyString {
-        reverse = (string) => {
+        reverse (string) {
             let stringArray = string.split('');
             let reverseArray = stringArray.reverse();
             let joinArray = reverseArray.join('');
             return joinArray;
         };
 
-        ucFirst = (string) => {
+        ucFirst (string) {
             let upperCase = string.charAt(0).toUpperCase();
             return upperCase + string.slice(1);
         };
 
-        ucWords = (string) => {
+        ucWords (string){
             let words = string.split(' ');
             let upperArray = [];
             for(let word of words) {

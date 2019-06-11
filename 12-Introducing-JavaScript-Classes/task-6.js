@@ -16,11 +16,14 @@ class Student extends User{
     }
 
     getCourse() {
-        return new Date().getFullYear() - this.year;
+
+        let cource;
+        cource = new Date().getFullYear() - this.year;
+        return cource > 5 ? 5 : cource;
     }
 }
 
-let student = new Student('John', 'Smith', 2015);
+let student = new Student('John', 'Smith', 2000);
 
 
 // This is how the **User** class should look like, from which our **Student** is inherited:

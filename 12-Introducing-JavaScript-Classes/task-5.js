@@ -1,18 +1,18 @@
 class Validator {
-    isEmail = (email) => {
+    isEmail (email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
     };
 
-    isDate = (date) => {
+    isDate (date) {
         return !isNaN(Date.parse(date));
     };
 
-    isDomain = (domain) => {
+    isDomain (domain) {
         let format = /[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+/;
         return format.test(String(domain).toLowerCase());
     };
 
-    isPhone = (phone) => {
+    isPhone (phone) {
         let format = /^\+?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{2})?[-. ]?([0-9]{2})?[-. ]?([0-9]{2})$/;
         return format.test(String(phone).toLowerCase());
     };
