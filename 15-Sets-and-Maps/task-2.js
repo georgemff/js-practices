@@ -6,6 +6,9 @@ class DB  {
         if(typeof person !== 'object') {
             throw new Error('parameter must be an Object!');
         }
+        if(!person.name || !person.age || !person.country || !person.salary){
+            throw new Error('Field is required');
+        }
 
         let id = 'userID: ' + this.user.size;
         this.user.set(id,person);
@@ -29,7 +32,9 @@ class DB  {
         if(arguments.length > 0){
             throw new Error('Unexpected Parameters!');
         }
-        return this.user.entries();
+        let arr = [];
+        arr.push(...this.user.entries());
+        return arr;
     }
 
     update(id, object){
@@ -71,6 +76,9 @@ class DB  {
     find(query){
         if(typeof query !== "object"){
             throw new Error('Invalid Parameter!');
+        }
+        if(Object.keys(query.age) .length === 0 || Object.keys(query.salary).length === 0){
+            throw new Error('Object is empty!');
         }
         let arr = [];
         for(let value of this.user.values()){
