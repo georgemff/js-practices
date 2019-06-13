@@ -1,11 +1,12 @@
 class DB  {
     constructor() {
-    this.user = new Map();
-};
-     create(person){
+        this.user = new Map();
+    };
+    create(person){
         if(typeof person !== 'object') {
             throw new Error('parameter must be an Object!');
         }
+
         let id = 'userID: ' + this.user.size;
         this.user.set(id,person);
         return id;
@@ -61,12 +62,31 @@ class DB  {
     }
 
     delete(id){
-         if(this.user.has(id)){
-             this.user.delete(id);
-             return true;
-         }
-         else throw new Error('User with this ID do not exists!');
+        if(this.user.has(id)){
+            this.user.delete(id);
+            return true;
+        }
+        else throw new Error('User with this ID do not exists!');
     }
+    find(query){
+        if(typeof query !== "object"){
+            throw new Error('Invalid Parameter!');
+        }
+        let arr = [];
+        for(let value of this.user.values()){
+               if(value['country'] === query['country'] && value['name'] === query['name'] ){
+                       if((value.salary <= query.salary.max && value.salary >= query.salary.min) ||
+                           value.salary >= query.salary.min || value.salary <= query.salary.max){
+                           if((value.age <= query.age.max && value.age >= query.age.min) ||
+                               value.age >= query.age.min || value.age <= query.age.max){
+                               arr = value;
+                               return arr;
+                           }
+                       }
+                   }
+               return arr;
+               }
+        }
 }
 
 const db = new DB();
@@ -75,11 +95,25 @@ const person = {
     name: 'Pitter', // required field with type string
     age: 21, // required field with type number
     country: 'ge', // required field with type string
-    salary: 500 // required field with type number
+    salary: 800 // required field with type number
 };
 
+const query = {
+    name: 'Pitter',
+    country: 'ge',
+    age: {
+        min: 21
+    },
+    salary: {
+       min: 300,
+       max: 600
+    }
+};
 const id = db.create(person);
+const findCustomers = db.find(query); // array of users
+console.log(findCustomers);
 const customer = db.read(id);
+console.log(customer);
 const customers = db.readAll(); // array of users
 console.log(customers);
 console.log(db.update(id, { age: 22 })); // id
