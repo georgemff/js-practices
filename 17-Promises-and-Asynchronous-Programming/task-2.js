@@ -1,5 +1,6 @@
 const getCustomers = (customer, country) => {
     return promise = new Promise(function(resolve, reject){
+        let arr = [];
     customer.forEach(function(obj){
        if(obj.verified){
            country.forEach(function(countryObj){
@@ -8,12 +9,13 @@ const getCustomers = (customer, country) => {
                }
               if(obj.id === countryObj.id){
                   obj.country = countryObj.country;
-                  resolve(obj);
+                  arr.push(obj);
               }
            });
        }
     });
-})};
+        resolve(arr);
+    })};
 
 const customers = [
     {

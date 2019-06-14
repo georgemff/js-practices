@@ -1,11 +1,13 @@
-const https = require('https');
+const fetchUrl = require("fetch").fetchUrl;
 const send = url =>
     new Promise((resolve, reject) => {
-        https.get(url, response => {
-            if (response.statusCode == 200) {
-                resolve(response);
-            } else
-                reject(`We have error, status code: ${response.statusCode}`);
+        fetchUrl(url, function(error, meta, body){
+            if(meta.status === 200){
+                const {data} = JSON.parse(body);
+                resolve(data);
+            } else {
+                reject(`We have error, status code: ${meta.status}`);
+            }
         });
     });
 

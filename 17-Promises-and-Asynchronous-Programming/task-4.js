@@ -1,5 +1,4 @@
-const https = require('https');
-
+const fetchUrl = require("fetch").fetchUrl;
 class Countries{
     constructor(endpoint){
         if(typeof endpoint !== 'string'){
@@ -11,14 +10,16 @@ class Countries{
         if(typeof num !== 'number'){
             throw new Error('Parameter must be a number');
         }
-        let url1 = this.url;
+        let urll = this.url;
         const promise = new Promise(function(resolve, reject) {
-             url1 += '?size=' + num;
-            https.get(url1, response => {
-                if (response.statusCode == 200) {
-                    resolve(response);
-                } else
-                    reject(`We have error, status code: ${response.statusCode}`);
+             urll += '?size=' + num;
+           fetchUrl(urll, function(error, meta, body){
+                if(meta.status === 200){
+                    const {data} = JSON.parse(body);
+                    resolve(data);
+                } else {
+                    reject(`We have error, status code: ${meta.status}`);
+                }
             });
         });
         return promise;
