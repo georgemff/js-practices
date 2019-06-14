@@ -3,16 +3,18 @@ const getCustomers = (customer, country) => {
         let arr = [];
         let i = 0;
     customer.forEach(function(obj){
+        let result = false;
        if(obj.verified){
-           if(!country[i].id){
-               reject(`We don't have information about country for this customer: ${obj.name}`);
-           }
            country.forEach(function(countryObj){
               if(obj.id === countryObj.id){
                   obj.country = countryObj.country;
                   arr.push(obj);
+                  result = true;
               }
            });
+           if(!result) {
+               reject(`We don't have information about country for this customer: ${obj.name}`);
+           }
        }
        i++;
     });
