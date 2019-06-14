@@ -1,18 +1,20 @@
 const getCustomers = (customer, country) => {
     return promise = new Promise(function(resolve, reject){
         let arr = [];
+        let i = 0;
     customer.forEach(function(obj){
        if(obj.verified){
+           if(!country[i].id){
+               reject(`We don't have information about country for this customer: ${obj.name}`);
+           }
            country.forEach(function(countryObj){
-               if(!countryObj.id){
-                   reject(`We don't have information about country for this customer: ${obj.name}`);
-               }
               if(obj.id === countryObj.id){
                   obj.country = countryObj.country;
                   arr.push(obj);
               }
            });
        }
+       i++;
     });
         resolve(arr);
     })};
