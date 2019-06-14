@@ -83,14 +83,31 @@ class DB  {
         let arr = [];
         for(let value of this.user.values()){
                if(value['country'] === query['country'] && value['name'] === query['name'] ){
-                       if((value.salary <= query.salary.max && value.salary >= query.salary.min) ||
-                           value.salary >= query.salary.min || value.salary <= query.salary.max){
-                           if((value.age <= query.age.max && value.age >= query.age.min) ||
-                               value.age >= query.age.min || value.age <= query.age.max){
+                   let salaryKey = Object.getOwnPropertyNames(query.salary);
+                   let ageKey = Object.getOwnPropertyNames((query.age));
+                   if(salaryKey.length === 2) {
+                       if ((value.salary <= query.salary.max && value.salary >= query.salary.min)) {
+                           if(ageKey.length === 2) {
+                               if ((value.age <= query.age.max && value.age >= query.age.min)) {
+                                   arr = value;
+                                   return arr;
+                               }
+                           } else if(value.age <= query.age.max || value.age >= query.age.min){
                                arr = value;
                                return arr;
                            }
                        }
+                   } else if(value.salary >= query.salary.min || value.salary <= query.salary.max){
+                       if(ageKey.length === 2) {
+                           if ((value.age <= query.age.max && value.age >= query.age.min)) {
+                               arr = value;
+                               return arr;
+                           }
+                       } else if(value.age <= query.age.max || value.age >= query.age.min){
+                           arr = value;
+                           return arr;
+                       }
+                   }
                    }
                return arr;
                }
