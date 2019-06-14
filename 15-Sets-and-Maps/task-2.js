@@ -77,38 +77,57 @@ class DB  {
         if(typeof query !== "object"){
             throw new Error('Invalid Parameter!');
         }
-        if(Object.keys(query.age) .length === 0 || Object.keys(query.salary).length === 0){
-            throw new Error('Object is empty!');
+        if(query.salary) {
+            if ( Object.keys(query.salary).length === 0) {
+                throw new Error('Object is empty!');
+            }
+        }
+        if(query.age) {
+            if ( Object.keys(query.age).length === 0) {
+                throw new Error('Object is empty!');
+            }
         }
         let arr = [];
+        let salaryKey;
+        let ageKey;
+        let validateSalary = false;
+        let validateAge = false;
         for(let value of this.user.values()){
                if(value['country'] === query['country'] && value['name'] === query['name'] ){
-                   let salaryKey = Object.getOwnPropertyNames(query.salary);
-                   let ageKey = Object.getOwnPropertyNames((query.age));
-                   if(salaryKey.length === 2) {
-                       if ((value.salary <= query.salary.max && value.salary >= query.salary.min)) {
-                           if(ageKey.length === 2) {
-                               if ((value.age <= query.age.max && value.age >= query.age.min)) {
-                                   arr = value;
-                                   return arr;
-                               }
-                           } else if(value.age <= query.age.max || value.age >= query.age.min){
-                               arr = value;
-                               return arr;
+                   if(query.salary) {
+                       salaryKey = Object.getOwnPropertyNames(query.salary);
+                   } else salaryKey = false;
+                   if(query.age) {
+                       ageKey = Object.getOwnPropertyNames((query.age));
+                   } else ageKey = false;
+                   if(salaryKey){
+                        if(salaryKey.length === 2){
+                            if(query.salary.min <= value.salary && query.salary.max >= value.salary){
+                                validateSalary = true;
+                            }
+                        } else if(query.salary.min <= value.salary || query.salary.max >= value.salary) {
+                            validateSalary = true;
+                        }
+                   }
+                   if(ageKey){
+                       if(ageKey.length === 2){
+                           if(query.age.min <= value.age && query.age.max >= value.age){
+                               validateAge = true;
                            }
-                       }
-                   } else if(value.salary >= query.salary.min || value.salary <= query.salary.max){
-                       if(ageKey.length === 2) {
-                           if ((value.age <= query.age.max && value.age >= query.age.min)) {
-                               arr = value;
-                               return arr;
-                           }
-                       } else if(value.age <= query.age.max || value.age >= query.age.min){
-                           arr = value;
-                           return arr;
+                       } else if(query.age.min <= value.age || query.age.max >= value.age) {
+                           validateAge = true;
                        }
                    }
+                   if(ageKey && validateAge && salaryKey && validateSalary){
+                       arr.push(value);
+                   } else if(!ageKey && salaryKey && validateSalary){
+                       arr.push(value);
+                   } else if(!salaryKey && ageKey && validateAge){
+                       arr.push(value);
+                   } else if (!ageKey && !salaryKey){
+                       arr.push(value);
                    }
+               }
                return arr;
                }
         }
@@ -127,7 +146,7 @@ const query = {
     name: 'Pitter',
     country: 'ge',
     age: {
-        min: 21
+        max: 21
     },
     salary: {
        min: 300,
